@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2a3f54</color>
+    <color name="colorPrimaryDark">#34495e</color>
+    <color name="colorAccent">#0F6597</color>
+    <color name="logoRed">#C13927</color>
+    <color name="logoBlue">#0F6597</color>
+    <color name="logoRedlight">#99902b1d</color>
+    <color name="white">#fff</color>
+
+    <color name="primaryText">#34495e</color>
+    <color name="bodyText">#445668</color>
+    <color name="secondaryText">#54000000</color>
+    <color name="hintText">#999</color>
+    <color name="divider">#12000000</color>
+</resources>

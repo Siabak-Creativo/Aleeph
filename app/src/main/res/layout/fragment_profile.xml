@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/header_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civProfilePic"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@+id/header_cover_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-70dp"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/face"
+                app:civ_border_color="#ffffff"
+                app:civ_border_width="3dp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_cover_image"
+                app:cardElevation="@dimen/card_elevation"
+                tools:targetApi="lollipop">
+
+                <RelativeLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/header_cover_image"
+                    android:background="@drawable/profile_background">
+
+                    <ImageView
+                        android:id="@+id/iv_edit_personal_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="60dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Marian Hart"
+                        android:textColor="@color/uvv_black"
+                        android:textSize="@dimen/text_size_title" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/margin_tv"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:text="Director of Project Management at GoldenPhase Solar"
+                        android:textColor="@color/primaryText"
+                        android:textSize="@dimen/text_size_primary" />
+
+                    <TextView
+                        android:id="@+id/tvEducation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_tv"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Syracuse University - New York"
+                        android:textColor="@color/bodyText"
+                        android:textSize="@dimen/text_size_secondary" />
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvEducation"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Greater San Diego Area . 500"
+                        android:textSize="@dimen/text_size_secondary" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvProfileStrength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvProfile"
+                android:layout_marginTop="@dimen/between_card_space"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/paddingLayout">
+
+                    <TextView
+                        android:id="@+id/tvProfileStrength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Profile Strength: "
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_primary" />
+
+                    <TextView
+                        android:id="@+id/tvProfileStrengthDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/tvProfileStrength"
+                        android:layout_toRightOf="@id/tvProfileStrength"
+                        android:fontFamily="sans-serif"
+                        android:text="Beginner"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_primary" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="@dimen/margin_ic"
+                        app:srcCompat="@drawable/ic_expand_more_black_24dp" />
+
+                    <ProgressBar
+                        android:id="@+id/profileStrengthSeekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvProfileStrength"
+                        android:progress="30"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvprofileAndPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvProfileStrength"
+                android:layout_marginTop="@dimen/between_card_space"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/paddingLayout"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/paddingLayout"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/tvCountProfileView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="0"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvProfileView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCountProfileView"
+                            android:text="Who viewed your profile"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_primary" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/paddingLayout">
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@color/colorPrimary" />
+                        <TextView
+                            android:id="@+id/tvCountPostView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="0"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvPostView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCountPostView"
+                            android:text="Post views"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_primary" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/paddingLayout">
+
+                        <TextView
+                            android:id="@+id/tvCountSearchAppearances"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="0"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tvSearchAppearances"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCountSearchAppearances"
+                            android:text="Search appearences"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_size_primary" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvprofileAndPosts"
+                android:layout_marginTop="@dimen/between_card_space"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_background"
+                    android:padding="@dimen/paddingLayout">
+
+                    <TextView
+                        android:id="@+id/tv_Education"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        android:text="Education" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_add_education"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_Education"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/margin_tv"
+                        android:text="+ Add More"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_title"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_education_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_Education"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_school_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_tv"
+                            android:layout_toEndOf="@+id/ivSchoolName"
+                            android:layout_toRightOf="@+id/ivSchoolName"
+                            android:fontFamily="sans-serif"
+                            android:text="Galgotias Universiy"
+                            android:textSize="@dimen/text_size_primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_school_name"
+                            android:layout_marginLeft="@dimen/margin_tv"
+                            android:layout_toEndOf="@id/ivSchoolName"
+                            android:layout_toRightOf="@id/ivSchoolName"
+                            android:text="2012-2016"
+                            android:textSize="@dimen/text_size_secondary" />
+
+                        <ImageView
+                            android:id="@+id/ivSchoolName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/margin_iv_edit"
+                            app:srcCompat="@drawable/ic_edit_black_24dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_education_details2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_education_details"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_school_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_tv"
+                            android:layout_toEndOf="@+id/ivSchoolName2"
+                            android:layout_toRightOf="@+id/ivSchoolName2"
+                            android:fontFamily="sans-serif"
+                            android:text="Kendriya Vidyalaya"
+                            android:textSize="@dimen/text_size_primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_school_name2"
+                            android:layout_marginLeft="@dimen/margin_tv"
+                            android:layout_toEndOf="@id/ivSchoolName2"
+                            android:layout_toRightOf="@id/ivSchoolName2"
+                            android:text="Intermediate"
+                            android:textSize="@dimen/text_size_secondary" />
+
+                        <ImageView
+                            android:id="@+id/ivSchoolName2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/margin_iv_edit"
+                            app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvSkills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvEducation"
+                android:layout_marginTop="@dimen/between_card_space"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_background"
+                    android:padding="@dimen/paddingLayout">
+
+                    <TextView
+                        android:id="@+id/tv_Skills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        android:text="Skills" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_add_skills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_Skills"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/margin_tv"
+                        android:text="+ Add More"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_title" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_contact_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_Skills"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_your_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_tv"
+                            android:text="Your profile"
+                            android:fontFamily="sans-serif"
+                            android:textSize="@dimen/text_size_primary"
+                            android:textStyle="bold"  />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_your_profile"
+                            android:layout_marginLeft="@dimen/margin_tv"
+                            android:text="https://www.aleeph.com/in/marian-hart-5b4hck6"
+                            android:textSize="@dimen/text_size_secondary"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/margin_iv_edit"
+                            app:srcCompat="@drawable/ic_account_box_black_24dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_contact_details"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_tv"
+                            android:text="Email"
+                            android:fontFamily="sans-serif"
+                            android:textSize="@dimen/text_size_primary"
+                            android:textStyle="bold"  />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_tv"
+                            android:text="marian.hart@hotmail.com"
+                            android:textSize="@dimen/text_size_secondary"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/margin_iv_edit"
+                            app:srcCompat="@drawable/ic_email_black_24dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvFamilyDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvSkills"
+                android:layout_marginTop="@dimen/between_card_space"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_background"
+                    android:padding="@dimen/paddingLayout">
+
+                    <TextView
+                        android:id="@+id/tv_family_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        android:text="Family Description" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_add_family"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_family_details"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/margin_tv"
+                        android:text="+ Add More"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_title" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_family_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_family_details"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_tv"
+                            android:layout_toEndOf="@+id/iv_your_family"
+                            android:layout_toRightOf="@+id/iv_your_family"
+                            android:text="Your profile"
+                            android:fontFamily="sans-serif"
+                            android:textSize="@dimen/text_size_primary"
+                            android:textStyle="bold"  />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/iv_your_family"
+                            android:layout_toRightOf="@id/iv_your_family"
+                            android:layout_marginLeft="@dimen/margin_tv"
+                            android:text="https://www.aleeph.com/in/marian-hart-5b4hck6"
+                            android:textSize="@dimen/text_size_secondary"/>
+
+                        <ImageView
+                            android:id="@+id/iv_your_family"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/margin_iv_edit"
+                            app:srcCompat="@drawable/ic_account_box_black_24dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_contact_details2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_your_profile2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_tv"
+                            android:layout_toEndOf="@+id/ivEmail"
+                            android:layout_toRightOf="@+id/ivEmail"
+                            android:text="Email"
+                            android:fontFamily="sans-serif"
+                            android:textSize="@dimen/text_size_primary"
+                            android:textStyle="bold"  />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/ivEmail"
+                            android:layout_toRightOf="@id/ivEmail"
+                            android:layout_below="@id/tv_your_profile2"
+                            android:layout_marginLeft="@dimen/margin_tv"
+                            android:text="marian.hart@hotmail.com"
+                            android:textSize="@dimen/text_size_secondary"/>
+
+                        <ImageView
+                            android:id="@+id/ivEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="@dimen/margin_iv_edit"
+                            app:srcCompat="@drawable/ic_email_black_24dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvTrainingDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvFamilyDetails"
+            android:layout_marginTop="@dimen/between_card_space"
+            app:cardElevation="@dimen/card_elevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_background"
+            android:padding="@dimen/paddingLayout">
+
+            <TextView
+                android:id="@+id/tv_training_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/margin_iv_edit"
+                android:text="Training details" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/margin_iv_edit"
+                app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_add_training"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_training_details"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin_tv"
+                android:text="+ Add More"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_title" />
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvJobsDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvTrainingDetails"
+                android:layout_marginTop="@dimen/between_card_space"
+                app:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/profile_background"
+                    android:padding="@dimen/paddingLayout">
+
+                    <TextView
+                        android:id="@+id/tv_jobs_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        android:text="Jobs details" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="@dimen/margin_iv_edit"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_add_jobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_jobs_details"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/margin_tv"
+                        android:text="+ Add More"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_title" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>
